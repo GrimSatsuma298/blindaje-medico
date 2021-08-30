@@ -1,0 +1,302 @@
+/*====== Fonts ======*/
+@font-face {
+  font-family: Avenir;
+  font-weight: normal;
+  src: url('/fonts/Avenir-Light-07.ttf')format('truetype');
+}
+
+@font-face {
+  font-family: Avenir;
+  font-weight: bolder;
+  src: url('/fonts/Avenir-Heavy-05.ttf')format('truetype');
+}
+
+@font-face {
+  font-family: Avenir;
+  font-weight: bold;
+  src: url('/fonts/Avenir-Black-03.ttf')format('truetype');
+}
+
+/*====== Variables ======*/
+:root{
+  --gold: #99844A;
+  --darkgold: #846F2C;
+  font-family: Avenir;
+}
+
+/*====== Basics ======*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+
+/*====== MAIN ======*/
+
+
+.title-section{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6), 
+    rgba(0, 0, 0, 0.6)
+  ),url('/images/signing.jpg');
+  min-height: 600px;
+  background-position: top center;
+  background-size: 1000px 700px;
+  background-repeat: no-repeat;
+  
+}
+
+.break-line::after{
+  content: "\a";
+  white-space: pre;
+}
+
+.all-info{
+  color: white;
+  padding-top: 200px;
+  padding-right: 25px;
+  text-align: right;
+}
+
+.all-info h1{
+  font-size: 30px;
+  font-weight: bold;
+}
+.all-info p {
+  font-weight: normal;
+}
+
+.btn-more-info{
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 15px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  border-radius: 30px;
+  background-color: var(--gold);
+ outline: none;
+ border:none;
+}
+
+
+/*====== SERVICES ======*/
+
+.standard-title{
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  margin: 60px 30px;
+}
+.underline-title{
+  border-bottom: 5px var(--gold) solid;
+}
+
+.all-services{
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  justify-content: space-evenly;
+  /* min-height: 1700px; */
+}
+
+.service{
+  display: flex;
+  width: 70%;
+  margin: 25px 0;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.service-description{
+  width: 70%;
+  font-size: 15px;
+  align-self: center;
+  font-weight: bolder;
+}
+.service-logo{
+  position: relative;
+  width: 25%;
+  font-size: 50px;
+  color: var(--gold);
+  text-align: center;
+}
+
+.fa-tv, .fa-file-signature{
+  font-size: 50px;
+}
+
+/*====== COUNTER ======*/
+
+.counter-section{
+  margin-top: 60px;
+  min-height: 400px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2), 
+    rgba(0, 0, 0, 0.4)
+  ),url('/images/contract.jpg');
+  background-position-x: center;
+  background-size: 140% 400px;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+}
+
+.counter-section p{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.flip-clock{
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flip-number{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 70px;
+  background-color: white;
+  width: 18%;
+  text-align: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.9) 30px 30px 20px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  text-decoration-line: line-through;
+  text-decoration-color: white;
+  text-decoration-thickness: 3px;
+  
+}
+
+/*====== NEWS ======*/
+.news-section{
+  min-height: 400px;
+}
+
+iframe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  min-height: 200px;
+  width: 80%;
+}
+.testimony{
+  width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-section h2{
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.news-section p {
+  font-weight: normal;
+}
+
+@media (min-width: 481px) {
+
+
+.standard-title{
+  font-size: 45px;
+}
+.service-description{
+  font-size: 18px;
+}
+
+  iframe{
+    width: 500px;
+    height: 450px;
+  }
+
+  .testimony{
+    width: 450px;
+  }
+}
+
+@media (min-width: 769px){
+  .title-section{
+    background-size: 100% 1200px;
+    min-height: 900px;
+  }
+  .break-line::after{
+    content: "";
+  }
+
+  .all-info{
+    padding-top: 300px;
+  }
+
+  .all-info h1{
+    font-size: 70px;
+  }
+  .all-info p {
+    font-size: 25px;
+  }
+
+  .btn-more-info{
+    width: 200px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  /*====== SERVICES ======*/
+
+  .all-services{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .service{
+    width: 40%;
+  }
+
+  .service-description{
+    font-size: 25px;
+  }
+
+  .service-logo{
+    font-size: 65px;
+  }
+
+  /*====== COUNTER ======*/
+  .counter-section{
+    min-height: 700px;
+    background-size: 100% 900px;
+    background-position: bottom center;
+    padding-top: 140px;
+  }
+
+  .counter-section p {
+    font-size: 35px;
+  }
+  .flip-clock{
+    width: 100%;
+    min-height: 200px;
+  }
+  .flip-number{
+    width: 13%;
+    font-size: 160px;
+  }
+
+  /*====== NEWS ======*/
+
+
+  iframe{
+    width: 800px;
+    height: 500px;
+  }
+  .testimony{
+    width: 800px;
+    font-size: 25px;
+  }
+
+}
