@@ -12,6 +12,23 @@ const contoller = {
     },
     news: (req, res) =>{
         res.render('news', {title: 'CONTACTO', style:'news', allNews: newsData});
+    },
+    message: (req, res) =>{
+        //  Making POST method to Flask Server
+        httpRequest({
+            method:'POST',
+            form: {message:req.body.message},
+            url: 'http://localhost:3002/bot/response'
+        }, function (err, postRes, body) {
+            if (err) {
+            res.end( JSON.stringify( err ) );
+            }
+            else {
+            console.log("******************ANSWER******************")
+            console.log(body)
+            res.end(  body  );
+            }
+        });
     }
 }
 

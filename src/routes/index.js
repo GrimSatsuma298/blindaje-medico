@@ -12,4 +12,8 @@ router.get('/contacto', mainController.contact)
 
 router.get('/noticias', mainController.news)
 
+// Send user message to python boy
+
+router.post('/message', mainController.message);
+
 module.exports = router;
